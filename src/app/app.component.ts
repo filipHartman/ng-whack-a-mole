@@ -18,10 +18,10 @@ const initialBoard = Array.from({length: NUMBER_OF_TILES}, (_, i) => i).map(inde
     <br>
     <button (click)="startGame()" [disabled]="isGameStarted">Start game</button>
 
-    <div class="game-board">
+    <div class="game-board" *ngIf="(board$$ | async) as board">
       <div
         class="tile"
-        *ngFor="let tile of board$$ | async"
+        *ngFor="let tile of board"
         [ngClass]="{'active': tile.isActive}"
         (mouseenter)="whackAMole(tile)"
       >
