@@ -1,0 +1,21 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-board {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.tile {
+  border: 1px solid black;
+}
+
+.active {
+  background-color: red;
+}
